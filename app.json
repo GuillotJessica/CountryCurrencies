@@ -1,0 +1,12 @@
+{
+  "name": "CoutriesCurrencies",
+  "displayName": "CoutriesCurrencies",
+  "expo": {
+    "name": "CoutriesCurrencies",
+    "slug": "CoutriesCurrencies",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
