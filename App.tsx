@@ -1,17 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'react-native';
+import {SafeAreaView, StyleSheet } from 'react-native';
+import AppContent from './src'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <AppContent/>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: StatusBar.currentHeight || 0,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
