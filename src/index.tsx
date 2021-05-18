@@ -6,6 +6,8 @@ import CCInput from './Components/ccinput'
 import CountryCard from "./Pages/countryCard";
 import Footer from './Components/footer'
 import Header from "./Components/header";
+import keys from './keys.json'
+
 export type Currency = {code: string, name: string, symbol: string}
 export type Country = {
   capital: string
@@ -49,7 +51,7 @@ export default () =>{
       .then((response) => response.json())
       .then((json:Country[]) => setCountries(json))
       .catch((error) => console.error(error))
-    fetch('http://data.fixer.io/api/latest?access_key=292dbfb14d51068c9fc3de85f84dbba4')
+    fetch(`http://data.fixer.io/api/latest?access_key=${keys.fixer.accessKey}`)
       .then((response) => response.json())
       .then((json) => setCurrenciesList(json))
       .catch((error) => console.error(error)) 
